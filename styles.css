@@ -21,7 +21,7 @@ body {
 .mainbg{
     position: absolute;
     background-color: white;
-    background-image: url(/asset/bg.png);
+    background-image: url(asset/bg.png);
     background-size:cover;
     background-repeat: no-repeat;
     box-shadow: inset 2000px 2000px rgba(255,255,255,0.6);
