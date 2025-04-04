@@ -185,6 +185,9 @@ body {
             grid-area: about-right;
             display: grid;
             place-items: center;
+            animation: textflow linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
             p{
             display: flex;
             width: 40vw;
@@ -195,6 +198,10 @@ body {
             }
         }
         
+}
+@keyframes textflow{
+    from{opacity: 0; transform:translate(200px)}
+    to{opacity: 1; transform:translate(0px)}
 }
 @keyframes pixfade{
     from{opacity: 0; transform:scale(0.4)}
@@ -220,10 +227,10 @@ body {
         z-index: 2;
         .sliding-pix{
             display: flex;
-            animation: myslide 20s infinite linear;
+            animation: myslide 16s infinite linear;
             z-index: 1;
             .card img{
-                margin: 0 2rem;
+                margin: 0 10px;
                 width: 300px;
                 z-index: 1;
             }
@@ -231,8 +238,8 @@ body {
     }
 }
 @keyframes myslide {
-    from  {transform: translateX(-120px)}
-    to  {transform: translateX(-3400px)}
+    from  {transform: translateX(0%)}
+    to  {transform: translateX(-50%)}
 }
 
 #achievement{
@@ -261,6 +268,9 @@ body {
             display: flex;
             align-items: center;
             padding-top: 2rem;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
             p{
                 font-size: var(--PMainText);
                 color: var(--darkblue);
@@ -268,6 +278,9 @@ body {
         }
         .left-box{
             grid-area: left-box;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
             img{
                 width: 100%;
                 padding-bottom: 3rem;
@@ -282,6 +295,9 @@ body {
         }
         .center-box{
             grid-area: center-box;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
             img{
                 width: 100%;
                 padding-bottom: 3rem;
@@ -296,6 +312,9 @@ body {
         }
         .right-box{
             grid-area: right-box;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
             img{
                 width: 100%;
                 padding-bottom: 3rem;
@@ -310,6 +329,7 @@ body {
         }
     }
 }
+
 #contact{
     padding: 3rem 0 3rem 0;
     width: 100vw;
@@ -338,6 +358,9 @@ body {
             border: 1px solid var(--darkblue);
             position: relative;
             background-color: rgba(255,255,255, 1);
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20%;
             p a{
                 text-decoration: none;
                 color: var(--darkblue);
@@ -368,6 +391,9 @@ body {
             border: 1px solid var(--darkblue);
             position: relative;
             background-color: rgba(255,255,255, 1);
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20%;
             p a{
                 text-decoration: none;
                 color: var(--darkblue);
@@ -395,6 +421,9 @@ body {
             border: 1px solid var(--darkblue);
             position: relative;
             background-color: rgba(255,255,255, 1);
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20%;
             p a{
                 text-decoration: none;
                 color: var(--darkblue);
@@ -414,7 +443,10 @@ body {
         }
     }
 }
-
+@keyframes appear {
+    from  {opacity: 0; transform: scale(0.5)}
+    to  {opacity: 1; transform: scale(1);}
+}
 /* Responsive Design */
 @media screen and (max-width: 1000px) {
     #about, #experience, #achivement, #contact{
@@ -652,3 +684,4 @@ body {
     }
 
 }
+
