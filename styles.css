@@ -10,7 +10,7 @@
     --PMainText: clamp(1.3rem, 2.7vw, 2rem);
     --PSubtext: clamp(1.1rem, 2.2vw, 1.5rem);
     --H2MainText: clamp(1.5rem, 4.2vw, 2.8rem);
-    --H1MainText: clamp(1.8rem, 4.5vw, 3rem);
+    --H1MainText: clamp(2.2rem, 4.8vw, 3rem);
     scroll-behavior: smooth;
 }
 
@@ -95,7 +95,7 @@ body {
                 align-items: center;
                 grid-area: hero-left;
                 h1{
-                    font-size: clamp(1.8rem, 4.5vw, 3rem);
+                    font-size: var(--H1MainText);
                     color: white;
                     padding: 0 4rem;
                     text-align: center;
@@ -171,7 +171,7 @@ body {
             align-items: center;
             animation: pixfade linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+            animation-range: entry 0% cover 30%;
             #heropix{
                 width: clamp(200px, 15vw, 20vw);
                 aspect-ratio: 1;
@@ -187,7 +187,7 @@ body {
             place-items: center;
             animation: textflow linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+            animation-range: entry 0% cover 30%;
             p{
             display: flex;
             width: 40vw;
@@ -200,7 +200,7 @@ body {
         
 }
 @keyframes textflow{
-    from{opacity: 0; transform:translate(200px)}
+    from{opacity: 0.5; transform:translate(100px)}
     to{opacity: 1; transform:translate(0px)}
 }
 @keyframes pixfade{
@@ -236,6 +236,9 @@ body {
             }
         }
     }
+    .sliding-pix:hover{
+        animation-play-state: paused;
+    }
 }
 @keyframes myslide {
     from  {transform: translateX(0%)}
@@ -254,9 +257,9 @@ body {
     .container{
         display: grid;
         width: 80%;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 7fr;
-        gap: 3.2rem;
+        gap: 1rem;
         justify-self: center;
         grid-template-areas:"top-box top-box top-box"
                             "left-box center-box right-box";
@@ -270,7 +273,7 @@ body {
             padding-top: 2rem;
             animation: appear linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+            animation-range: entry 0% cover 30%;
             p{
                 font-size: var(--PMainText);
                 color: var(--darkblue);
@@ -278,9 +281,10 @@ body {
         }
         .left-box{
             grid-area: left-box;
+            padding: 0 2.5rem;
             animation: appear linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+            animation-range: entry 0% cover 30%;
             img{
                 width: 100%;
                 padding-bottom: 3rem;
@@ -295,9 +299,10 @@ body {
         }
         .center-box{
             grid-area: center-box;
+            padding: 0 2.5rem;
             animation: appear linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+            animation-range: entry 0% cover 30%;
             img{
                 width: 100%;
                 padding-bottom: 3rem;
@@ -312,9 +317,10 @@ body {
         }
         .right-box{
             grid-area: right-box;
+            padding: 0 2.5rem;
             animation: appear linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+            animation-range: entry 0% cover 30%;
             img{
                 width: 100%;
                 padding-bottom: 3rem;
@@ -360,7 +366,7 @@ body {
             background-color: rgba(255,255,255, 1);
             animation: appear linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 20%;
+            animation-range: entry 0% cover 5%;
             p a{
                 text-decoration: none;
                 color: var(--darkblue);
@@ -393,7 +399,7 @@ body {
             background-color: rgba(255,255,255, 1);
             animation: appear linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 20%;
+            animation-range: entry 0% cover 5%;
             p a{
                 text-decoration: none;
                 color: var(--darkblue);
@@ -423,7 +429,7 @@ body {
             background-color: rgba(255,255,255, 1);
             animation: appear linear;
             animation-timeline: view();
-            animation-range: entry 0% cover 20%;
+            animation-range: entry 0% cover 5%;
             p a{
                 text-decoration: none;
                 color: var(--darkblue);
@@ -684,4 +690,3 @@ body {
     }
 
 }
-
