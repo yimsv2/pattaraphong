@@ -7,10 +7,13 @@
     <meta name= "description" content= "An experienced underwriter (especially motor, property, engineering and accident & health) in Thailand and thrilled to discuss insurance with you">
     <link rel="icon" type="image/x-icon" href="asset/favicon.jpg">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-70QFTEK49W"></script>
     <script>
@@ -19,105 +22,110 @@
       gtag('js', new Date());
     
       gtag('config', 'G-70QFTEK49W');
-    </script>
+    </script> 
 </head>
-<body>
+<body class="flex-col w-full max-w-[1440px] mx-auto bg-white text-[#3655a3] font-[Quicksand]">
     <!-- Home Section -->
-    <section id="home">
-        <div class="container">
-            <input type="checkbox" name="input_menuopen" id="input_menuopen">
-            <label for="input_menuopen"><span class="material-symbols-outlined" id="menuclose">close</span><span class="material-symbols-outlined" id="menu">menu</span></label>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#achievement">Achievements</a></li>
-                    <li><a href="#contact">Contact</a></li>
+    <section id="home" class="relative h-screen bg-[url('/asset/herosection_bg.png')] bg-cover">
+            <span class="material-symbols-outlined text-white" id="menuclose">close</span>
+            <span class="material-symbols-outlined text-white" id="menu">menu</span>
+            <nav id="myNav">
+                <ul class="flex">
+                    <li><a href="#home" class="text-lg lg:text-2xl">Home</a></li>
+                    <li><a href="#about" class="text-lg lg:text-2xl">About</a></li>
+                    <li><a href="#experience" class="text-lg lg:text-2xl">Experience</a></li>
+                    <li><a href="#achievement" class="text-lg lg:text-2xl">Achievements</a></li>
+                    <li><a href="#contact" class="text-lg lg:text-2xl">Contact</a></li>
                 </ul>
             </nav>
-            <div class="home-left">
-            <h1>Pattaraphong Teapjiraprapa</h1>
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="flex-col w-full h-screen content-center lg:justify-items-end p-[3rem] lg:p-[4rem]">
+                    <h1 class="flex size-14 lg:size-24 justify-center items-center bg-[#70bbf9] text-3xl text-white lg:text-6xl">I'm</h1>
+                    <h1 class="mt-[1rem] text-3xl lg:text-right text-white lg:text-6xl">Pattaraphong Teapjiraprapa</h1>
+                    <p class="mt-[3rem] text-xl text-white lg:hidden">An experienced underwriter and 
+                        product development professional (non-life)<br>
+                        
+
+                    </p>
+                </div>
+                <div class="hidden lg:flex w-full h-screen justify-center items-center p-[3rem] lg:p-[4rem]">
+                    <p class="lg:text-4xl text-white">An experienced underwriter and product development professional (non-life)
+                        - especially motor, property, engineering, accident and health.
+                    </p>
+                </div>
             </div>
-            <div class="home-right">
-                <p>An experienced underwriter and product development professional (non-life).</p>
-            </div>
-        </div>
     </section>
 <div class="mainbg">
     <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-    <div class="container">
-        <div class="about-left">
+    <section id="about" class="flex-col p-[1rem] lg:p-[1.5rem]">
+    <h2 class="flex w-full p-[1rem] lg:p-[3rem] text-2xl lg:text-4xl font-bold">About Me</h2>
+    <div class="grid grid-cols-1 w-full place-items-center lg:grid-cols-2">
+        <div class="flex lg:col-start-1 p-[1rem] lg:p-[3rem]">
             <img id="heropix" src="asset/pattaraphong.png" alt="Pattaraphong Teapjiraprapa underwriter product development">
         </div>
-        <div class="about-right">
-            <p>Over a decade, I have been with non-life insurance and experienced various roles and responsibilities 
+        <div class="flex lg:col-start-2 bg-[#70bbf9] p-[1rem] lg:p-[3rem]">
+            <p class="text-white text-xl lg:text-2xl">Over a decade, I have been with non-life insurance and experienced various roles and responsibilities 
                 including but not limited to underwriting, reinsurance, product development and management, product implementation and
                 go-to-market strategy.<br><br>New technology and automation process are also my interests to pursue the operational excellence.
+            </p>
         </div>
     </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
-        <h2>Hands-On Experience</h2>
-        <div class="sliding-frame">
-            <div class="sliding-pix">
-                <div class="card"><img src="asset/Underwriting.png" alt="underwriting non life"></div>
-                <div class="card"><img src="asset/Reinsurance.png" alt="reinsurance"></div>
-                <div class="card"><img src="asset/Survey.png" alt="site survey risk assessment risk engineer"></div>
-                <div class="card"><img src="asset/Portfolio Analysis.png" alt="portfolio analysis portfolio management"></div>
-                <div class="card"><img src="asset/Product Life Cycle.png" alt="product development product management"></div>
-                <div class="card"><img src="asset/Product Implementation.png" alt="product implementation product setup"></div>
-                <div class="card"><img src="asset/Product Governance.png" alt="product governance product control"></div>
-                <div class="card"><img src="asset/Rate Making.png" alt="rate making non life insurance"></div>
-                <div class="card"><img src="asset/Online Sales.png" alt="online sales customer journey"></div>
-                <div class="card"><img src="asset/Underwriting.png" alt="underwriting non life"></div>
-                <div class="card"><img src="asset/Reinsurance.png" alt="reinsurance"></div>
-                <div class="card"><img src="asset/Survey.png" alt="site survey risk assessment risk engineer"></div>
-                <div class="card"><img src="asset/Portfolio Analysis.png" alt="portfolio analysis portfolio management"></div>
-                <div class="card"><img src="asset/Product Life Cycle.png" alt="product development product management"></div>
-                <div class="card"><img src="asset/Product Implementation.png" alt="product implementation product setup"></div>
-                <div class="card"><img src="asset/Product Governance.png" alt="product governance product control"></div>
-                <div class="card"><img src="asset/Rate Making.png" alt="rate making non life insurance"></div>
-                <div class="card"><img src="asset/Online Sales.png" alt="online sales customer journey"></div>
-            </div>
+    <section id="experience" class="flex-col p-[1rem] lg:p-[1.5rem]">
+        <h2 class="flex w-full p-[1rem] lg:p-[3rem] text-2xl lg:text-4xl font-bold">Hands-On Experience</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-[1rem] lg:p-[3rem]">
+                <div class="flex w-full justify-center"><img src="asset/Underwriting.png" alt="underwriting non life"></div>
+                <div class="flex w-full justify-center"><img src="asset/Reinsurance.png" alt="reinsurance"></div>
+                <div class="flex w-full justify-center"><img src="asset/Survey.png" alt="site survey risk assessment risk engineer"></div>
+                <div class="flex w-full justify-center"><img src="asset/Portfolio Analysis.png" alt="portfolio analysis portfolio management"></div>
+                <div class="flex w-full justify-center"><img src="asset/Product Life Cycle.png" alt="product development product management"></div>
+                <div class="flex w-full justify-center"><img src="asset/Product Implementation.png" alt="product implementation product setup"></div>
+                <div class="flex w-full justify-center"><img src="asset/Product Governance.png" alt="product governance product control"></div>
+                <div class="flex w-full justify-center"><img src="asset/Rate Making.png" alt="rate making non life insurance"></div>
+                <div class="flex w-full justify-center"><img src="asset/Online Sales.png" alt="online sales customer journey"></div>
         </div>
     </section>
 
     <!-- Achievement Section -->
-    <section id="achievement">
-        <h2>Achievements</h2>
-        <div class="container">
-            <div class="top-box">
-                <P>Some of achievements I am happy to share:</P>
-            </div>
-            <div class="left-box">
-                <img src="asset/Geolocation.png" alt="geolocation underwriting">
-                <p>Sourcing and applying <span>Geolocation technology in underwriting process</span> to manage risk accumulation properly and efficiently.</p>
-            </div>
-            <div class="center-box">
-                <img src="asset/Automation.png" alt="online platform automation">
-                <p>Exploring MS365 technology and building an online platform for producers to facilitate policy issuance, <span> driving significant growth of product</span> from this distribution channel.</p>
-            </div>
-            <div class="right-box">
-                <img src="asset/Product Dev.png" alt="new product development motor product">
-                <p>Designing, positioning and pricing a motor product <span>generating premiums over THB300m</span> within a year.</p>
-            </div>
-        </div>
+    <section id="achievement" class="flex-col p-[1rem] lg:p-[1.5rem]">
+        <h2 class="flex w-full p-[1rem] lg:px-[3rem] text-2xl lg:text-4xl font-bold">Achievements</h2>
+        <P class="flex w-full p-[1rem] lg:px-[3rem] pb-[2rem] text-xl lg:text-2xl">Some of achievements I am happy to share:</P>
+                <div class="grid w-full grid-cols-1 lg:grid-cols-3 gap-[1rem] lg:p-[3rem]">
+                    <div class="flex-col place-items-center">
+                        <img src="asset/Geolocation.png" alt="geolocation underwriting">
+                        <p class="pt-[2rem] text-lg lg:text-xl">Sourcing and applying <span>Geolocation technology in underwriting process</span> to manage risk accumulation properly and efficiently.</p>
+                    </div>
+                    <div class="flex-col place-items-center">
+                        <img src="asset/Automation.png" alt="online platform automation">
+                        <p class="pt-[2rem] text-lg lg:text-xl">Exploring MS365 technology and building an online platform for producers to facilitate policy issuance, <span> driving significant growth of product</span> from this distribution channel.</p>
+                    </div>
+                    <div class="flex-col place-items-center">
+                        <img src="asset/Product Dev.png" alt="new product development motor product">
+                        <p class="pt-[2rem] text-lg lg:text-xl">Designing, positioning and pricing a motor product <span>generating premiums over THB300m</span> within a year.</p>
+                    </div>
+                </div>
     </section>
 
-    <footer id="contact">
-        <h2>Contact</h2>
-        <div class="container">
-            <div class="email"><p><a href="mailto:yimsv2@gmail.com">yimsv2@gmail.com</a></p></div>
-            <div class="linkedin"><p><a href="https://www.linkedin.com/in/pattaraphong-teapjiraprapa-5b896998/">Pattaraphong Teapjiraprapa</a></p></div>
-            <div class="website"><p><a href="https://www.insurehead.com">www.insurehead.com</a></p></div>
+    <footer id="contact" class="flex-col px-[1rem] lg:px-[3rem]">
+        <h2 class="flex w-full p-[1rem] lg:pb-[2rem] lg:px-[3rem] text-2xl lg:text-4xl font-bold">Contact</h2>
+        <div class="grid grid-cols-1 pb-[2rem] lg:grid-cols-3 gap-[1rem]">
+            <div class="flex-col justify-center items-center py-[1rem] bg-[#70bbf9]">
+                <div class="flex justify-center"><span id="emailIcon"class="material-symbols-outlined text-white pb-[0.5rem]">mail</span></div>
+                <div class="flex justify-center"><a href="mailto:yimsv2@gmail.com"><p class="text-lg lg:text-xl text-wrap wrap-break-word text-white">yimsv2@gmail.com</p></a></div>
+            </div>
+           <div class="flex-col justify-center items-center py-[1rem] bg-[#70bbf9]">
+                <div class="flex justify-center"><ion-icon id="linkedInIcon" name="logo-linkedin" class="text-white pb-[0.5rem]"></ion-icon></div>
+                <div class="flex justify-center"><a href="https://www.linkedin.com/in/pattaraphong-teapjiraprapa-5b896998/"><p class="text-lg lg:text-xl text-wrap wrap-break-word text-center text-white">Pattaraphong Teapjiraprapa</p></a></div>
+            </div>
+            <div class="flex-col justify-center items-center py-[1rem] bg-[#70bbf9]">
+                <div class="flex justify-center"><span id="globeIcon"class="material-symbols-outlined text-white pb-[0.5rem]">globe</span></div>
+                <div class="flex justify-center"><a href="https://www.insurehead.com"><p class="text-lg lg:text-xl text-wrap wrap-break-word text-white">www.insurehead.com</p></a></div>
+            </div>
         </div>
     </footer>
 </div>
-    
 </body>
+<script src="/main.js"></script>
 </html>
