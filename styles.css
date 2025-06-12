@@ -1,7 +1,9 @@
 *{
     font-weight: 500;
 }
-
+ body{
+    box-shadow: 2px 2px 8px rgb(213, 213, 213);
+ }
 #emailIcon, #globeIcon, #linkedInIcon{
     font-size: clamp(30px,8vw, 40px);
     font-weight: 200;
@@ -20,14 +22,49 @@
 #myNav{
     position: absolute;
     top: 20px;
-    z-index: 5;
     display: flex;
     width: 100%;
     justify-content: center;
+    
     ul li a{
         color: white;
         padding: 0 0.8rem;
     }
+}
+#home{
+    animation: zoom 1s ease;
+}
+#heropix{
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgb(213, 213, 213);
+    animation: slide-down 1s ease;
+    animation-timeline: view();
+    animation-range: 0% cover 40%;
+}
+#hero-text{
+    animation: slide-up 1s ease;
+    animation-timeline: view();
+    animation-range: 0% cover 40%;
+}
+#exp-card{
+    animation: appear 1s ease;
+    animation-timeline: view();
+    animation-range: 0% cover 30%;
+}
+#achievement-card{
+    animation: appear 2s ease;
+    animation-timeline: view();
+    animation-range: 0% cover 40%;
+
+}
+#contact-card{
+    animation: appear 2s ease;
+    animation-timeline: view();
+    animation-range: 0% cover 15%;
 }
 @media screen and (max-width: 639px){
     #menu{
@@ -41,7 +78,7 @@
     
     #myNav{
         display: none;
-        animation: appear 1s ease-in-out;
+        animation: appear 1s ease;
     }
     nav ul{
         position: absolute;
@@ -57,9 +94,21 @@
         }
     }
 }
+@keyframes zoom{
+        from{transform: scale(1.1)}
+        to{transform: scale(1)}
+}
 @keyframes appear{
         from{opacity: 0}
         to{opacity: 1}
+}
+@keyframes slide-up{
+        from{opacity: 0.6; transform: translateY(50px)}
+        to{opacity: 1; transform: translateY(0px)}
+}
+@keyframes slide-down{
+        from{opacity: 0.6; transform: translateY(-50px)}
+        to{opacity: 1; transform: translateY(0px)}
 }
 
 @media screen and (min-width: 640px){
