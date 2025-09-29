@@ -1,5 +1,6 @@
 *{
     font-weight: 500;
+    scroll-behavior: smooth;
 }
  body{
     box-shadow: 2px 2px 8px rgb(213, 213, 213);
@@ -36,14 +37,17 @@
 }
 #heropix{
     display: flex;
-    margin: 0 auto;
-    width: 70%;
+    width: 100%;
+    img{
+    width: 100%;
     aspect-ratio: 1;
-    border-radius: 50%;
-    box-shadow: 2px 2px 8px rgb(213, 213, 213);
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 2px 2px 8px rgb(71,71, 71, 0.6);
     animation: slide-down 1s ease;
     animation-timeline: view();
     animation-range: 0% cover 40%;
+    }
 }
 #hero-text{
     animation: slide-up 1s ease;
@@ -54,11 +58,18 @@
     animation: appear 1s ease;
     animation-timeline: view();
     animation-range: 0% cover 30%;
+    img{
+    border-radius: 10px;
+    }
 }
 #achievement-card{
     animation: appear 2s ease;
     animation-timeline: view();
     animation-range: 0% cover 40%;
+    img{
+     display: flex;
+     border-radius: 10px;
+    }
 
 }
 #contact-card{
